@@ -1,0 +1,90 @@
+/* stylesheet  */
+
+/* import  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+
+/* base  */
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #2c3e50;
+    color: #fff;
+}
+
+.calculator{
+    position: relative;
+    width: 300px;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    user-select: none;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 3.4px 3.4px 2.7px rgba(0, 0, 0, 0.022),
+    8.7px 8.7px 6.9px rgba(0, 0, 0, 0.031),
+    17.7px 17.7px 14.2px rgba(0, 0, 0, 0.039),
+    36.5px 36.5px 29.2px rgba(0, 0, 0, 0.048),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+.calculator .display{
+    width: 100%;
+    position: relative;
+    background: #fff;
+    padding: 2rem;
+    
+}
+.display input{
+    width: 100%;
+    outline: none;
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+    user-select: none;
+    border: none;
+    background: none;
+}
+*::placeholder{
+    color: #000;
+}
+.btn-groups{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.btn-groups .btn{
+    display: grid;
+    place-items: center;
+    border: 1px solid transparent;
+    background: #34495e;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 1px solid #425a72;
+    color: #fff;
+    padding: 1.8rem 1rem;
+    outline: none;
+
+}
+.btn-groups .btn:active{
+    background: #2c3e50;
+}
+
+.btn-groups .btn:first-child{
+    background: #e67e22;
+}
+.equal{
+    background: #27ae60 !important;
+}
+.btn.plus{
+    grid-row: span 2;
+}
